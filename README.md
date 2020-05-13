@@ -25,6 +25,8 @@ Additional flags:
 
 * ultra light - 12KB without gzip (4.5KB - gzipped)
 * easy to use
+* caches information
+* provides fallback if no JS available (or for old browsers)
 * powered by Svelte
 
 ## Reason
