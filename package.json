@@ -1,0 +1,28 @@
+{
+  "name": "github-card",
+  "version": "1.0.0",
+  "author": {
+    "url": "https://reddec.net",
+    "email": "owner@reddec.net",
+    "name": "Baryshnikov Aleksandr (reddec)"
+  },
+  "repository": "https://github.com/reddec/github-card",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "start": "sirv public"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "11.0.2",
+    "@rollup/plugin-node-resolve": "^7.0.0",
+    "rollup": "^1.20.0",
+    "rollup-plugin-livereload": "^1.0.0",
+    "rollup-plugin-svelte": "^5.0.3",
+    "rollup-plugin-terser": "^5.1.2",
+    "svelte": "^3.0.0",
+    "sirv-cli": "^0.4.4"
+  },
+  "dependencies": {
+
+  }
+}
