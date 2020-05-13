@@ -6,7 +6,7 @@
         <small>loading...</small>
     </p>
 {:then info}
-    <div class="github" class:shadow={!flat}>
+    <div class="github" class:shadow={!flat} class:block={wide} class:inline-block={!wide}>
         <div class="github-card">
             {#if !plain}
                 <div class="github-logo">
@@ -85,8 +85,15 @@
     }
     .github {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-        display: inline-block;
         padding: 10px;
+    }
+
+    .inline-block {
+        display: inline-block;
+    }
+
+    .block {
+        display: block;
     }
 
     .shadow {
@@ -227,6 +234,7 @@
 </style>
 <script>
     export let repo;
+    export let wide = false;
     export let plain = false;
     export let flat = false;
     export let keepalive = 60 * 60 * 1000; // 1 HOUR

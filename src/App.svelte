@@ -20,13 +20,19 @@
                 Fallback link<br/>
                 <input type="checkbox" bind:checked="{fallback}"/>
             </label>
+            <label>
+                Wide<br/>
+                <input type="checkbox" bind:checked="{wide}"/>
+            </label>
         </div>
         {#if repo}
             <h2>Preview</h2>
-            <GithubCard repo="{repo}" flat="{flat}" plain="{plain}"/>
+            <div>
+                <GithubCard repo="{repo}" flat="{flat}" plain="{plain}" wide="{wide}"/>
+            </div>
             <h2>Code for embedding</h2>
             <pre>
-&lt;github-card repo="{repo}"{#if flat}&nbsp;flat="yes"{/if}{#if plain}&nbsp;plain="yes"{/if}&gt;
+&lt;github-card repo="{repo}"{#if flat}&nbsp;flat="yes"{/if}{#if plain}&nbsp;plain="yes"{/if}{#if wide}&nbsp;wide="yes"{/if}&gt;
 {#if fallback}
 &lt;a href="https://github.com/{repo}"&gt;https://github.com/{repo}&lt;/a&gt;
 {/if}
@@ -43,6 +49,7 @@
     let withShadow = true;
     let withLogo = true;
     let fallback = true;
+    let wide = true;
 
     $: flat = !withShadow;
     $: plain = !withLogo;
