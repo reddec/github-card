@@ -81,6 +81,9 @@
 {/await}
 <style>
     .github {
+        all: initial;
+    }
+    .github {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
         display: inline-block;
         padding: 10px;
