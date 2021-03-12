@@ -11,13 +11,14 @@ export default [
     {
         input: 'src/main.js',
         output: {
-            sourcemap: true,
+            sourcemap: false,
             format: 'iife',
             name: 'app',
-            file: 'public/build/bundle.js'
+            file: 'dist/github-card-playground.min.js'
         },
         plugins: [
             svelte({
+                // enable run-time checks when not in production
                 dev: !production,
             }),
             resolve({
@@ -25,8 +26,17 @@ export default [
                 dedupe: ['svelte']
             }),
             commonjs(),
+
+            // In dev mode, call `npm run start` once
+            // the bundle has been generated
             !production && serve(),
+
+            // Watch the `public` directory and refresh the
+            // browser on changes when not in production
             !production && livereload('public'),
+
+            // If we're building for production (npm run build
+            // instead of npm run dev), minify
             production && terser()
         ],
         watch: {

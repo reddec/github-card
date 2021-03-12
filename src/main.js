@@ -1,7 +1,6 @@
 import App from './App.svelte';
 
-const app = new App({
-    target: document.body,
-});
 
-export default app;
+window.GithubCardPlayground = function (options) {
+    return new App(options)
+}

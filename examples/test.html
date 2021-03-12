@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script defer src="../dist/github-card-playground.min.js"></script>
+</head>
+<body>
+<!--<element-logo symbol="Fa" name="fluent-amqp" tags="go,CLI,lib" background="#400000" tile="#a02c2c">-->
+<!--    <script defer src="https://cdn.jsdelivr.net/gh/reddec/element-logo-generator@1/dist/element-logo.min.js"></script>-->
+<!--</element-logo>-->
+<div id="playground"></div>
+<script>
+    document.addEventListener("DOMContentLoaded", function (event) {
+        new GithubCardPlayground({
+            target: document.getElementById("playground"),
+        });
+    });
+</script>
+</body>
+</html>
